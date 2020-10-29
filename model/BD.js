@@ -5,7 +5,7 @@ module.exports =  class User{
 
     static async find(email){
         
-        const conn = await MongoClient.connect("mongodb://127.0.0.1:27017/"),
+        const conn = await MongoClient.connect("mongodb+srv://deploy:deploy123@cluster0.wr7qj.mongodb.net/ProjFinal?retryWrites=true&w=majority"),
             db = conn.db("ProjFinal");
         if(email)
             return await db.collection("Users").find({email: email}).toArray();    
