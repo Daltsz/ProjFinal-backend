@@ -25,10 +25,10 @@ module.exports =  class User{
 
 
     static async findWord(word){
-        const conn = await MongoClient.connect("mongodb://127.0.0.1:27017/"),
+        const conn = await MongoClient.connect("mongodb+srv://deploy:deploy123@cluster0.wr7qj.mongodb.net/ProjFinal?retryWrites=true&w=majority"),
             db = conn.db("ProjFinal");
         if(word){
-            return await db.collection("words").find({word: word}).toArray();    
+            return await db.collection("Words").find({word: word}).toArray();    
         }
 
     }
