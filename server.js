@@ -140,7 +140,7 @@ app.post("/api/login", async (req, res) =>{
 
 
 
-app.listen(10000, () => {
+app.listen( process.env.PORT || 10000, () => {
 
     console.log("Servidor Esta rodando na Porta 10000");
 
