@@ -35,7 +35,7 @@ module.exports =  class User{
 
 
     static async insert(user){
-        const conn = await MongoClient.connect("mongodb://127.0.0.1:27017/"),
+        const conn = await MongoClient.connect("mongodb+srv://deploy:deploy123@cluster0.wr7qj.mongodb.net/ProjFinal?retryWrites=true&w=majority"),
             db = conn.db("ProjFinal");
         db.collection('Users').insertOne({first_Name: user.first_Name, last_name: user.last_name, email: user.email, password: user.password});
     }
