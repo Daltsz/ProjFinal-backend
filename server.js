@@ -27,7 +27,7 @@ app.use(session({
 
 app.get("/", async (req, res, ) =>{
 
-    res.json("ALO HEROKUUUU")
+    
   
 
 });
