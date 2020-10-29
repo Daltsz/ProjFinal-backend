@@ -27,6 +27,18 @@ app.use(session({
 
 app.get("/", async (req, res, ) =>{
 
+    res.json("ALO HEROKUUUU")
+  
+
+});
+
+
+
+
+
+
+app.get("/load", async (req, res, ) =>{
+
     req.session.login = xinxila;
 
     if(req.session && req.session.login){
