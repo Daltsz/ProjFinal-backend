@@ -14,7 +14,7 @@ module.exports =  class User{
 
 
     static async findLogin(value){
-        const conn = await MongoClient.connect("mongodb://127.0.0.1:27017/"),
+        const conn = await MongoClient.connect("mongodb+srv://deploy:deploy123@cluster0.wr7qj.mongodb.net/ProjFinal?retryWrites=true&w=majority"),
             db = conn.db("ProjFinal");
         if(value){
             return await db.collection("Users").find({email: value.email, password: value.password}).toArray();    
