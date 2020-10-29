@@ -25,19 +25,13 @@ app.use(session({
 }));
 
 
+
+
+
+
+
+
 app.get("/", async (req, res, ) =>{
-
-    res.json('ae SEUS PUTOS')
-  
-
-});
-
-
-
-
-
-
-app.get("/load", async (req, res, ) =>{
 
     req.session.login = xinxila;
 
