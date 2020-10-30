@@ -21,7 +21,6 @@ app.use(session({
     cookie: {secure: false}
 
 
-
 }));
 
 
@@ -36,7 +35,7 @@ app.get("/", async (req, res) =>{
     console.log(req.session.login);
 
     req.session.login = xinxila;
-    
+
     console.log(req.session.login);
     console.log(req.session);
 
