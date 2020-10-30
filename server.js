@@ -6,7 +6,7 @@ const cors = require("cors");
 const dbConect = require("./model/BD");
 
 
-let xinxila  = '';
+let xinxila = '';
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,9 +31,14 @@ app.use(session({
 
 
 
-app.get("/", async (req, res, ) =>{
+app.get("/", async (req, res) =>{
+
+    console.log(req.session.login);
 
     req.session.login = xinxila;
+    
+    console.log(req.session.login);
+    console.log(req.session);
 
     if(req.session && req.session.login){
 
@@ -118,6 +123,7 @@ app.post("/api/login", async (req, res) =>{
 
     if(typeof login[0] === 'undefined'){
 
+
         res.json(-1)
 
 
@@ -126,7 +132,7 @@ app.post("/api/login", async (req, res) =>{
         if(login[0].email == email && login[0].password == password){
 
 
-            xinxila = email
+            xinxila = email;
     
             res.json(1);
     
