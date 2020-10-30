@@ -40,9 +40,6 @@ app.get("/", async (req, res) =>{
     console.log(req.session);
 
     if(req.session && req.session.login){
-
-
-        
         
         res.json(req.session.id);
 
