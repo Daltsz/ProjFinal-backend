@@ -141,16 +141,27 @@ app.post("/api/login", async (req, res) =>{
 
 
     }
-        
+
 
 });
 
 
 
 
+app.post("/api/logout", async (req, res) =>{
+
+    const logoout = req.body.logoout;
 
 
+    if(logoout === 'x'){
+        
+        session_destroy();
 
+        res.json("Logout realizado com sucesso");
+    }
+
+    
+});
 
 app.listen( process.env.PORT || 10000, () => {
 
