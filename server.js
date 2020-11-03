@@ -95,7 +95,7 @@ app.post("/api/query", async (req, res) =>{
 
     if(typeof wordFelling[0] === 'undefined'){
 
-        res.json(`${word} - Neutral`);
+        res.json(`${word} - Neutro`);
 
     }else{
 
